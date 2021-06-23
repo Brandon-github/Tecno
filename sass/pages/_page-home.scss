@@ -1,0 +1,122 @@
+
+@use "../colors" as c;
+
+#home{
+    width: 100%;
+    min-height: 100vh;
+
+    .section{
+        min-height: inherit;
+
+        &.header{
+            background: url(../../img/images/img5.jpg) rgba($color: c.$clr_black, $alpha: 0.7);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-blend-mode: multiply;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .content{
+                text-align: center;
+                font-size: 6em;
+
+                .content_title{
+                    position: relative;
+                    color: c.$clr_green;
+                    text-transform: uppercase;
+
+                    &::before{
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 120px;
+                        height: 5px;
+                        background: c.$clr_green;
+                    }
+                }
+
+                .content_subtitle{
+                    color: c.$clr_white;
+                }
+            }
+        }
+
+        &.info{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 80px;
+            background: c.$clr_black;
+            color: c.$clr_white;
+            padding-top: 100px;
+            padding-bottom: 80px;
+
+            .content{
+                font-size: 1.5em;
+
+                .content_title{
+                    font-size: 2.5em;
+                }
+
+                .content_paragraph{
+                    text-align: justify;
+                    margin-bottom: 40px;
+                }
+
+                .cards{
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+
+                    .card{
+                        position: relative;
+                        background: c.$clr_white;
+                        width: 350px;
+                        height: 400px;
+                        margin: 0 20px;
+                        box-shadow: 8px 12px 10px rgba($color: c.$clr_white, $alpha: 0.06);
+
+                        .card_content{
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            width: 100%;
+                            height: 50%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            color: c.$clr_black;
+
+                            .card_content_title{
+                                font-size: 2em;
+                            }
+
+                            .card_content_paragraph{
+                                font-size: 0.8em;
+                                text-align: center;
+                                padding: 0 10px;
+                            }
+                        }
+
+                        .card_image{
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 50%;
+
+                            img{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
