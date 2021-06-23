@@ -1,3 +1,4 @@
+@use "colors" as c;
 
 *{
     margin: 0;
@@ -6,6 +7,15 @@
 
 body{
     font-family: 'Roboto', sans-serif;
+}
+
+body::-webkit-scrollbar{
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: c.$clr_black;
+    border-radius: 5px;
 }
 
 #container{
