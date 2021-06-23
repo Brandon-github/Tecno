@@ -22,5 +22,11 @@ Libreria para reducir el codigo escrito en javascript para la interactividad del
 
 [Pagina principal](https://jquery.com/)
 
+## Visualiza el sitio
+
+Visualiza mi sitio conforme voy implementandole nuevas secciones y funcionalidades a el.
+
+Enlace al sitio [aqui](https://tecno.vercel.app/)
+
 
 
