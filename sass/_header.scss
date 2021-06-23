@@ -1,0 +1,51 @@
+@use "colors" as c;
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: c.$clr_green;
+    z-index: 999;
+
+    #logo{
+        font-size: 1.85em;
+        color: c.$clr_white;
+        font-weight: 800;
+        margin-left: 40px;
+    }
+
+    #nav{
+        margin-right: 40px;
+
+        .nav_list{
+            padding: 0;
+
+            .nav_item{
+                list-style: none;
+                display: inline-flex;
+                margin: 0 20px;
+
+                .nav_link{
+                    position: relative;
+                    text-decoration: none;
+                    font-size: 1.223em;
+                    color: c.$clr_white;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    transition: .4s linear;
+
+                    &:hover{
+                        color: c.$clr_black;
+                        transform: scale(1.15);
+                    }
+                }
+            }
+        }
+    }
+}
