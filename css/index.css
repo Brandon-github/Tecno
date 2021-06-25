@@ -177,6 +177,44 @@ body::-webkit-scrollbar-thumb {
   height: 100%;
   transition: transform 0.3s ease-in;
 }
+#home .section.strategy {
+  background: #111111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#home .section.strategy .box {
+  width: 1200px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px auto;
+}
+#home .section.strategy .box.box_left {
+  flex-direction: row-reverse;
+}
+#home .section.strategy .box .box_image {
+  width: auto;
+  height: auto;
+}
+#home .section.strategy .box .box_image img {
+  width: 100%;
+  height: 100%;
+}
+#home .section.strategy .box .box_content {
+  font-size: 1.5em;
+  color: #ffffff;
+  padding: 0 80px;
+}
+#home .section.strategy .box .box_content .box_title {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#home .section.strategy .box .box_content .box_paragraph {
+  text-align: justify;
+}
 
 #team {
   width: 100%;
