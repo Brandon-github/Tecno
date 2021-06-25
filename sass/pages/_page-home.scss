@@ -1,5 +1,6 @@
 
 @use "../colors" as c;
+@import "../includes/header-page";
 
 #home{
     width: 100%;
@@ -8,41 +9,7 @@
     .section{
         min-height: inherit;
 
-        &.header{
-            background: url(../../img/images/img5.jpg) rgba($color: c.$clr_black, $alpha: 0.7);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-            background-blend-mode: multiply;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            .content{
-                text-align: center;
-                font-size: 6em;
-
-                .content_title{
-                    position: relative;
-                    color: c.$clr_green;
-                    text-transform: uppercase;
-
-                    &::before{
-                        position: absolute;
-                        bottom: 0;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        width: 120px;
-                        height: 5px;
-                        background: c.$clr_green;
-                    }
-                }
-
-                .content_subtitle{
-                    color: c.$clr_white;
-                }
-            }
-        }
+        @include config-header('../../img/images/img5.jpg');
 
         &.info{
             display: flex;
@@ -78,6 +45,11 @@
                         height: 400px;
                         margin: 0 20px;
                         box-shadow: 8px 12px 10px rgba($color: c.$clr_white, $alpha: 0.06);
+                        border-radius: 20px;
+
+                        &:hover .card_image img{
+                            transform: scale(1.7) rotate(15deg);
+                        }
 
                         .card_content{
                             position: absolute;
@@ -108,11 +80,14 @@
                             left: 0;
                             width: 100%;
                             height: 50%;
+                            overflow: hidden;
 
                             img{
                                 width: 100%;
                                 height: 100%;
+                                transition: transform .3s ease-in;
                             }
+                            
                         }
                     }
                 }

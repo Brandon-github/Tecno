@@ -1,0 +1,13 @@
+@use "../colors" as c;
+@import "../includes/header-page";
+
+#team{
+    width: 100%;
+    min-height: 100vh;
+
+    .section{
+        min-height: inherit;
+
+        @include config-header('../../img/images/img1.jpg');
+    }   
+}
