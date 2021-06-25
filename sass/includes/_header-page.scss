@@ -1,0 +1,44 @@
+@use "../colors" as c;
+
+@mixin config-header($url) {
+    @if($url != ''){
+        &.header{
+            background: url($url) rgba($color: c.$clr_black, $alpha: 0.7);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-blend-mode: multiply;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .content{
+                text-align: center;
+                font-size: 6em;
+    
+                .content_title{
+                    position: relative;
+                    color: c.$clr_green;
+                    text-transform: uppercase;
+    
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 200px;
+                        height: 5px;
+                        background: c.$clr_green;
+                    }
+                }
+    
+                .content_subtitle{
+                    color: c.$clr_white;
+                }
+            }
+        }
+    }@else{
+        @error "error, failed to search the image url #{$url}";
+    }
+}
